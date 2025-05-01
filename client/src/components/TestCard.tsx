@@ -1,4 +1,4 @@
-import { Clock } from "lucide-react";
+import { Clock, Keyboard } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
@@ -48,11 +48,11 @@ const TestCard = ({
   // Determine badge color based on test status
   const getBadgeVariant = () => {
     if (testStatus.includes("Excellent") || testStatus.includes("Good")) {
-      return "success";
+      return "default"; // Using default for success state
     } else if (testStatus.includes("Keep Practicing")) {
       return "destructive";
     }
-    return "default";
+    return "secondary";
   };
 
   return (
@@ -71,6 +71,10 @@ const TestCard = ({
         </div>
 
         {/* Text to Type */}
+        <div className="mb-2 font-bold text-xl flex items-center">
+          <Keyboard className="mr-2 h-5 w-5 text-primary" />
+          <span className="text-primary">Speed</span><span>Keys</span><span className="text-muted-foreground text-sm ml-2">Typing Test</span>
+        </div>
         <div className="bg-muted rounded-md p-4 mb-4 font-mono text-lg leading-relaxed border border-border">
           <div className="typed-text relative mb-1">
             {renderTypedText()}
