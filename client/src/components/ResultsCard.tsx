@@ -14,7 +14,7 @@ const ResultsCard = ({ wpm, accuracy, timeInSeconds, onTryAgain }: ResultsCardPr
   const { toast } = useToast();
 
   const copyResults = () => {
-    const resultText = `TypeMaster Results:
+    const resultText = `SpeedKeys Results:
 Speed: ${wpm} WPM
 Accuracy: ${accuracy}%
 Time: ${timeInSeconds} seconds`;
@@ -38,11 +38,11 @@ Time: ${timeInSeconds} seconds`;
   };
 
   const shareResults = () => {
-    const shareText = `I just typed ${wpm} WPM with ${accuracy}% accuracy on TypeMaster! Try to beat my score!`;
+    const shareText = `I just typed ${wpm} WPM with ${accuracy}% accuracy on SpeedKeys! Try to beat my score!`;
     
     if (navigator.share) {
       navigator.share({
-        title: 'TypeMaster Results',
+        title: 'SpeedKeys Results',
         text: shareText,
         url: window.location.href
       }).catch((error) => {

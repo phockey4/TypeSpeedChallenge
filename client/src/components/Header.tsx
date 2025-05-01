@@ -7,7 +7,7 @@ const Header = () => {
         <div className="flex items-center">
           <h1 className="text-2xl font-bold text-primary flex items-center">
             <Keyboard className="mr-2" />
-            TypeMaster
+            SpeedKeys
           </h1>
         </div>
       </div>
