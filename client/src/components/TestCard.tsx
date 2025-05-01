@@ -71,9 +71,9 @@ const TestCard = ({
         </div>
 
         {/* Text to Type */}
-        <div className="mb-2 font-bold text-xl flex items-center">
+        <div className="mb-3 font-bold text-xl flex items-center">
           <Keyboard className="mr-2 h-5 w-5 text-primary" />
-          <span className="text-primary">Speed</span><span>Keys</span><span className="text-muted-foreground text-sm ml-2">Typing Test</span>
+          <span className="gradient-text">Speed</span><span>Keys</span><span className="text-muted-foreground text-sm ml-2">Typing Test</span>
         </div>
         <div className="bg-muted rounded-md p-4 mb-4 font-mono text-lg leading-relaxed border border-border">
           <div className="typed-text relative mb-1">
